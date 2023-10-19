@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-[#e8e8fe]">
+    <h1 id="welcomeMsg" class="font-bold max-sm:w-[90%] mx-auto text-center text-2xl my-10  sm:text-3xl drop-shadow text-[#8561f4] md:text-3xl lg:text-5xl">Welcome to Payroll System</h1>
+    <div class=" relative flex flex-col justify-center items-center lg:items-start lg:justify-evenly lg:m-10 ">
+    <div class="flex flex-col gap-2 lg:gap-4  justify-center items-center w-[90%] mx-auto ">
+        <input class="dashboardInputStyle" type="number" placeholder="Rate per Hour" id="ratePerHour" />
+        <input class="dashboardInputStyle" type="number" placeholder="Hour per day" id="hourPerDay" />
+        <input class="dashboardInputStyle" type="number" placeholder="Number of days worked" id="workingDays" />
+        <h1 class="mb-1 font-semibold text-[#8561f4] lg:text-lg">Deduction of Salary:</h1>
+        <label for="monthlyWage" class="text-sm">TAX 15% of Monthly Wage</label>
+        <input class="dashboardInputStyle" type="number" id="monthlyWage" disabled/>
+        <label for="philhealth" class="text-sm">Philhealth 5%</label>
+        <input class="dashboardInputStyle" type="number" id="philhealth" disabled />
+        <label for="sss" class="text-sm">SSS 2%</label>
+        <input class="dashboardInputStyle" type="number" disabled id="sss" />
+    </div>
+    <div class="w-[90%] flex flex-col items-start ml-8 my-5 justify-start gap-1 lg:flex-row">
+      <label for="grossSalary" class="font-semibold lg:text-xl uppercase lg:font-bold text-[#8561f4]">Gross Salary:</label>
+      <input class="formInputStyle" type="number" id="grossSalary" disabled/>
+      <label for="deduction" class=" font-semibold lg:text-xl uppercase lg:font-bold text-[#8561f4]">Deduction:</label>
+      <input class="formInputStyle" type="number" id="deduction" disabled />
+      
+      <label for="netSalary" class=" font-semibold lg:text-xl uppercase lg:font-bold text-[#8561f4]">Net Salary:</label>
+      <input class="formInputStyle" type="number" id="netSalary" disabled />
+    </div>
+    <button id="computeSalary" class="btnStyle flex justify-center items-center">Compute</button>
+    
+  </div>
+    <script src="dashboardScript.js"></script>
+  </body>
+</html>

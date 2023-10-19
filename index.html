@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payroll System</title>
+
+    <link rel="stylesheet" href="dist/assets/index-cfde1d0b.css" />
+    <style>
+      .hide {
+        display: none;
+      }
+      #loginForm,#signUpForm{
+        animation: formAnime .5s ease-in-out
+      }
+      /* #errorBox{
+        animation: errorAnime .5s ease-in-out
+      } */
+      @keyframes formAnime {
+        0% {
+          opacity: 0%;
+        }
+        20% {
+          opacity: 20%;
+        }
+        40% {
+          opacity: 40%;
+        }
+        60% {
+          opacity: 60%;
+        }
+        80% {
+          opacity: 80%;
+        }
+        100% {
+          opacity: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="bg-[#e8e8fe] sm:bg-[url('\homeBgImage.png')] h-screen bg-center bg-cover transition-colors duration-300 ease-linear "
+  >
+    <h1
+      class="font-bold max-sm:w-[90%] text-center text-2xl absolute left-[50%] translate-x-[-50%] top-12 sm:text-3xl drop-shadow text-[#8561f4] md:text-3xl lg:text-5xl md:translate-x-0 lg:top-24 md:top-32 md:right-[10%] blurEffect"
+    >
+      Payroll System
+    </h1>
+    <ol
+      class="absolute flex items-center justify-center gap-3 left-[50%] translate-x-[-50%] top-[25%] sm:translate-x-0 sm:items-left sm:translate-y-0 sm:right-[10%] sm:top-[32%] sm:w-[40%] w-[80%] text-center blurEffect"
+    >
+      <li
+        class="w-full sm:w-[40%] lg:w-[35%] text-[#5E42B6] md:text-lg text-sm font-semibold uppercase py-3 border-b border-b-[#5E42B6] hover:text-[#5E42B6] active:border-b-[#7B68B6] active:bg-transparent focus:outline-[#4C3594] cursor-pointer transition-all"
+        id="loginSelection"
+      >
+        Login
+      </li>
+      <li
+        class="w-full sm:w-[40%] lg:w-[35%] text-[#7B68B6] md:text-lg text-sm font-semibold uppercase py-3 border-b-gray-300 border-b hover:text-[#5E42B6] active:border-b-[#7B68B6] active:bg-transparent focus:outline-[#4C3594] cursor-pointer transition-all"
+        id="signUpSelection"
+      >
+        Sign Up
+      </li>
+    </ol>
+    <div
+      class="absolute z-10 flex flex-col items-center sm:items-left justify-center gap-3 left-[50%] translate-x-[-50%] top-[40%] sm:translate-x-0 sm:translate-y-0 sm:right-[10%] sm:top-[45%] sm:w-[40%] w-[80%] text-center blurEffect"
+    >
+      <form
+        action="employeeDashboard.html"
+        class="flex flex-col w-full sm:w-[80%] gap-2.5"
+        id="loginForm"
+      >
+        <input
+          class="formInputStyle"
+          type="text"
+          placeholder="EmployeeID"
+          id="loginEmpID"
+        />
+        <input
+          class="formInputStyle"
+          type="password"
+          placeholder="Password"
+          id="loginEmpPwd"
+        />
+        <input class="btnStyle" type="submit" value="Login" />
+      </form>
+
+      <form
+        action=""
+        class="hide flex flex-col w-full sm:w-[80%] gap-2 active"
+        id="signUpForm"
+      >
+        <input class="formInputStyle" type="text" placeholder="Employee name" />
+        <input class="formInputStyle" type="date" placeholder="Employee DOB" />
+        <input
+          class="formInputStyle"
+          type="number"
+          placeholder="Employee Phone Number"
+          inputmode="numeric"
+        />
+        <input
+          class="formInputStyle invalid:ring-red-600"
+          type="email"
+          placeholder="Employee Email"
+          inputmode="email"
+        />
+        <input class="formInputStyle" type="text" placeholder="EmployeeID" />
+        <input class="formInputStyle" type="password" placeholder="Password" />
+        <input class="btnStyle" type="submit" value="Sign Up" />
+      </form>
+
+      <h1>forgot Password</h1>
+    </div>
+    <div
+      class="opacity-0 -z-30 relative top-[30%] left-[50%] translate-x-[-50%] translate-y-[-50%] drop-shadow-md bg-[#5E42B6] text-white w-[70%] p-5 transition-top lg:w-[40%] rounded-md  "
+      id="errorBox"
+    >
+      <span
+        class="absolute top-1 right-2.5 text-sm font-semibold cursor-pointer lg:text-lg"
+        id="errorX"
+        >x</span
+      >
+      <h1 id="errorMsg"></h1>
+    </div>
+    <div class="bg-white absolute top-2 right-2 w-14 h-7 drop-shadow-xl rounded-full flex justify-start transition-colors duration-300 ease-linear items-center" id="darkToggleContainer">
+      <div class="bg-[#7B68B6] m-1 w-5 h-5 rounded-full drop-shadow-2xl transition-colors duration-300 ease-linear " id="darkToggle"> 
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

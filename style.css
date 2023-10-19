@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.formInputStyle{
+    @apply p-1 rounded shadow text-[#5E42B6] active:outline-none focus:ring-1 focus:ring-[#5E42B6] focus:outline-none ;
+}
+.dashboardInputStyle{
+    @apply p-1 rounded shadow text-[#5E42B6] active:outline-none focus:ring-1 focus:ring-[#5E42B6] focus:outline-none w-[90%] ;
+}
+.btnStyle{
+    @apply bg-[#5E42B6] w-[50%] text-sm mx-auto cursor-pointer hover:bg-[#412893] text-white py-1 my-2 rounded shadow font-semibold lg:text-lg lg:w-[20%];
+}
+
+.activeErrMsg{
+    @apply opacity-100 z-20 top-[50%] transition-all duration-200 ease-linear
+}
+
+.deactiveErrMsg{
+    @apply opacity-0 -z-30 top-[30%]  transition-all duration-150 ease-linear
+
+}
+.blurBackground{
+    @apply blur-md brightness-50
+}
+
+.darkMode{
+    @apply justify-end bg-[#7B68B6] animate-toggleAnime
+}
+.darkModeBtn{
+    @apply bg-white
+}
+.bodyDarkMode{
+    @apply bg-black sm:bg-[url('\homeBgImage.png'),filter(hue(180))];
+}
