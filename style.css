@@ -3,26 +3,39 @@
 @tailwind utilities;
 
 
+body::-webkit-scrollbar{
+    @apply hidden 
+}
+*{
+    @apply scroll-smooth font-Poppins
+}
+
 .formInputStyle{
-    @apply p-1 rounded shadow text-[#5E42B6] active:outline-none focus:ring-1 focus:ring-[#5E42B6] focus:outline-none ;
+    @apply p-1 rounded shadow w-full text-[#5E42B6] active:outline-none focus:ring-1 focus:ring-[#5E42B6] focus:outline-none sm:px-2   ;
+}
+.formInputStyle2{
+    @apply p-1 rounded shadow w-full text-[#5E42B6] active:outline-none focus:ring-1 focus:ring-[#5E42B6] focus:outline-none sm:px-2 sm:mb-8 sm:shadow-[#5E42B6]  ;
 }
 .dashboardInputStyle{
-    @apply p-1 rounded shadow text-[#5E42B6] active:outline-none focus:ring-1 focus:ring-[#5E42B6] focus:outline-none w-[90%] ;
+    @apply p-1   rounded shadow text-[#5E42B6] active:outline-none focus:ring-1 focus:ring-[#5E42B6] focus:outline-none w-full sm:bg-transparent sm:border-b sm:shadow-none sm:rounded-none  sm:border-[#5E42B6] sm:focus:ring-0  ;
+}
+.dashboardInputStyle2{
+    @apply p-1   rounded shadow text-[#5E42B6] active:outline-none focus:ring-1 focus:ring-[#5E42B6] focus:outline-none w-full sm:bg-transparent sm:border-b sm:shadow-none sm:rounded-none sm:mb-8 sm:border-[#5E42B6] sm:focus:ring-0  ;
 }
 .btnStyle{
-    @apply bg-[#5E42B6] w-[50%] text-sm mx-auto cursor-pointer hover:bg-[#412893] text-white py-1 my-2 rounded shadow font-semibold lg:text-lg lg:w-[20%];
+    @apply bg-[#5E42B6] w-[50%] text-sm mx-auto cursor-pointer hover:bg-[#412893] text-white py-1 my-2 rounded shadow font-semibold lg:text-lg lg:w-[30%];
 }
 
 .activeErrMsg{
-    @apply opacity-100 z-20 top-[50%] transition-all duration-200 ease-linear
+    @apply top-[50%] animate-showErrorAnime
 }
 
 .deactiveErrMsg{
-    @apply opacity-0 -z-30 top-[30%]  transition-all duration-150 ease-linear
+    @apply -top-[15%]  animate-exitErrorAnime
 
 }
 .blurBackground{
-    @apply blur-md brightness-50
+    @apply blur-md brightness-50 transition-all duration-500 ease-in-out 
 }
 
 .darkMode{
@@ -32,5 +45,11 @@
     @apply bg-white
 }
 .bodyDarkMode{
-    @apply bg-black sm:bg-[url('\homeBgImage.png'),filter(hue(180))];
+    @apply bg-black;
+}
+.labelStyle,.linkStyle{
+    @apply text-white
+}
+.confirmDBox{
+    @apply flex transition-all
 }

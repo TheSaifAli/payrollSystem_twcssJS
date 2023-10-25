@@ -3,28 +3,44 @@ module.exports = {
   content: ["*"],
   theme: {
     extend: {
+      fontFamily:{
+        'Poppins':"Poppins"
+      },
       keyframes:{
-        errorAnime:{
+        showErrorAnime:{
           'from':{
-            top:'[-300px]',
+            top:'-15%',
             opacity:'0',
           },
           'to':{
-            top:'[50%]',
+            top:'50%',
             opacity:'100'
+          },
+        },
+        exitErrorAnime:{
+          'from':{
+            top:'50%',
+            opacity:'100',
+          },
+          'to':{
+            top:'-15%',
+            opacity:'0'
           },
         },
         toggleAnime:{
           'from':{
             justifyContain:'start',
+            
           },
           'to':{
             justifyContain:'end',
+      
           },
         }
       },
       animation:{
-        errorAnime:'errorAnime 5s ease-in-out',
+        showErrorAnime:'showErrorAnime .5s ease-in-out',
+        exitErrorAnime:'exitErrorAnime .5s ease-in-out',
         toggleAnime:'toggleAnime 10s linear forwards',
       }
     },

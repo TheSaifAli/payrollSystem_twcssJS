@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payroll System</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <style>
       .hide {
@@ -13,9 +16,7 @@
       #loginForm,#signUpForm{
         animation: formAnime .5s ease-in-out
       }
-      /* #errorBox{
-        animation: errorAnime .5s ease-in-out
-      } */
+     
       @keyframes formAnime {
         0% {
           opacity: 0%;
@@ -37,37 +38,35 @@
         }
       }
     </style>
-    <link rel="stylesheet" href="/assets/index-cfde1d0b.css">
+    <link rel="stylesheet" href="/assets/index-a4145cc6.css">
   </head>
-  <body
-    class="bg-[#e8e8fe] sm:bg-[url('\homeBgImage.png')] h-screen bg-center bg-cover transition-colors duration-300 ease-linear "
-  >
+  <body>
+    <div class="relative bg-[#e8e8fe] sm:bg-[url('\homeBgImage.png')] h-screen sm:bg-center sm:bg-cover transition-colors duration-300 ease-linear blurEffect" id="mainContainer">
     <h1
-      class="font-bold max-sm:w-[90%] text-center text-2xl absolute left-[50%] translate-x-[-50%] top-12 sm:text-3xl drop-shadow text-[#8561f4] md:text-3xl lg:text-5xl md:translate-x-0 lg:top-24 md:top-32 md:right-[10%] blurEffect"
+      class="font-bold max-sm:w-[90%] text-center text-2xl absolute left-[50%] translate-x-[-50%] top-12 sm:text-3xl sm:translate-x-0 sm:top-14 sm:right-[10%] drop-shadow text-[#8561f4] md:text-3xl lg:text-5xl lg:top-14  blurEffect"
     >
       Payroll System
     </h1>
     <ol
-      class="absolute flex items-center justify-center gap-3 left-[50%] translate-x-[-50%] top-[25%] sm:translate-x-0 sm:items-left sm:translate-y-0 sm:right-[10%] sm:top-[32%] sm:w-[40%] w-[80%] text-center blurEffect"
+      class="absolute flex items-center justify-center gap-3 left-[50%] translate-x-[-50%] top-[22%] sm:translate-x-0 sm:items-left sm:translate-y-0 sm:right-[10%] sm:top-[24%] sm:w-[40%] w-[80%] text-center blurEffect"
     >
       <li
-        class="w-full sm:w-[40%] lg:w-[35%] text-[#5E42B6] md:text-lg text-sm font-semibold uppercase py-3 border-b border-b-[#5E42B6] hover:text-[#5E42B6] active:border-b-[#7B68B6] active:bg-transparent focus:outline-[#4C3594] cursor-pointer transition-all"
+        class="w-full sm:w-[40%] lg:w-[35%] text-[#5E42B6]  text-sm lg:text-lg font-semibold uppercase py-3 border-b border-b-[#5E42B6] hover:text-[#5E42B6] active:border-b-[#7B68B6] active:bg-transparent focus:outline-[#4C3594] cursor-pointer transition-all"
         id="loginSelection"
       >
         Login
       </li>
       <li
-        class="w-full sm:w-[40%] lg:w-[35%] text-[#7B68B6] md:text-lg text-sm font-semibold uppercase py-3 border-b-gray-300 border-b hover:text-[#5E42B6] active:border-b-[#7B68B6] active:bg-transparent focus:outline-[#4C3594] cursor-pointer transition-all"
+        class="w-full sm:w-[40%] lg:w-[35%] text-[#7B68B6]  text-sm lg:text-lg font-semibold uppercase py-3 border-b-gray-300 border-b hover:text-[#5E42B6] active:border-b-[#7B68B6] active:bg-transparent focus:outline-[#4C3594] cursor-pointer transition-all"
         id="signUpSelection"
       >
         Sign Up
       </li>
     </ol>
     <div
-      class="absolute z-10 flex flex-col items-center sm:items-left justify-center gap-3 left-[50%] translate-x-[-50%] top-[40%] sm:translate-x-0 sm:translate-y-0 sm:right-[10%] sm:top-[45%] sm:w-[40%] w-[80%] text-center blurEffect"
+      class="absolute  flex flex-col items-center sm:items-left justify-center gap-3 left-[50%] translate-x-[-50%] top-[36%] sm:translate-x-0 sm:translate-y-0 sm:right-[10%] sm:top-[38%] sm:w-[40%] w-[80%] text-center blurEffect"
     >
       <form
-        action="employeeDashboard.html"
         class="flex flex-col w-full sm:w-[80%] gap-2.5"
         id="loginForm"
       >
@@ -84,11 +83,12 @@
           id="loginEmpPwd"
         />
         <input class="btnStyle" type="submit" value="Login" />
+        <a href="forgotPassword.html" class="text-sm hover:underline hover:text-[#4C3594]">forgot Password</a>
       </form>
 
       <form
-        action=""
-        class="hide flex flex-col w-full sm:w-[80%] gap-2 active"
+      
+        class="hide flex flex-col w-full  sm:w-[80%] gap-2 active"
         id="signUpForm"
       >
         <input class="formInputStyle" type="text" placeholder="Employee name" />
@@ -108,12 +108,12 @@
         <input class="formInputStyle" type="text" placeholder="EmployeeID" />
         <input class="formInputStyle" type="password" placeholder="Password" />
         <input class="btnStyle" type="submit" value="Sign Up" />
+        <a href="/" class="text-sm hover:underline hover:text-[#4C3594]">Already have an Account</a>
       </form>
-
-      <h1>forgot Password</h1>
     </div>
+  </div>
     <div
-      class="opacity-0 -z-30 relative top-[30%] left-[50%] translate-x-[-50%] translate-y-[-50%] drop-shadow-md bg-[#5E42B6] text-white w-[70%] p-5 transition-top lg:w-[40%] rounded-md  "
+      class="absolute -top-[15%] left-[50%] translate-x-[-50%] translate-y-[-50%] drop-shadow-md bg-[#5E42B6] text-white w-[70%] p-5 transition-top lg:w-[40%] rounded-md  "
       id="errorBox"
     >
       <span
@@ -123,10 +123,11 @@
       >
       <h1 id="errorMsg"></h1>
     </div>
-    <div class="bg-white absolute top-2 right-2 w-14 h-7 drop-shadow-xl rounded-full flex justify-start transition-colors duration-300 ease-linear items-center" id="darkToggleContainer">
-      <div class="bg-[#7B68B6] m-1 w-5 h-5 rounded-full drop-shadow-2xl transition-colors duration-300 ease-linear " id="darkToggle"> 
+    <div class="bg-white absolute top-2 right-2 w-10 h-6 drop-shadow-xl rounded-full flex justify-start transition-colors duration-300 ease-linear items-center sm:hidden" id="darkToggleContainer">
+      <div class="bg-[#7B68B6] m-1 w-4 h-4 rounded-full drop-shadow-2xl transition-colors duration-300 ease-linear " id="darkToggle"> 
       </div>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
