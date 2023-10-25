@@ -76,7 +76,7 @@ logoutBtnEl.addEventListener('click',()=>{
         })
     })
     yesBtnEl.addEventListener('click',()=>{
-        location.href='/'
+        location.href='index.html'
     })
 })
 
